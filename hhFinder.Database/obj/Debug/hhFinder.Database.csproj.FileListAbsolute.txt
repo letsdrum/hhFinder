@@ -1,0 +1,4 @@
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Database\bin\Debug\hhFinder.Database.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Database\bin\Debug\hhFinder.Database.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Database\obj\Debug\hhFinder.Database.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Database\obj\Debug\hhFinder.Database.pdb

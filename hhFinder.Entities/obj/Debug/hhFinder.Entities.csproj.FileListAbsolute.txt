@@ -4,3 +4,4 @@ d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Entities\obj\Debug\hh
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Entities\obj\Debug\hhFinder.Entities.pdb
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Entities\bin\Debug\Newtonsoft.Json.dll
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Entities\bin\Debug\Newtonsoft.Json.xml
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Entities\obj\Debug\hhFinder.Entities.csprojResolveAssemblyReference.cache

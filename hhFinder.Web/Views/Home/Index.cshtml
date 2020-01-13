@@ -2,19 +2,10 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="container d-flex flex-wrap p-3 justify-content-between">
-    @foreach (var vacancy in ViewBag.List)
-    {
-        <div class="card text-white bg-primary mb-3" style="max-width: 500px;">
-            <div class="card-header">@vacancy.Id</div>
-            <div class="card-body">
-                <h5 class="card-title">@vacancy.Name</h5>
-                <a href="@vacancy.AlternateURL" class="stretched-link"></a>
-
-                @Html.Raw(vacancy.Description)
-
-                <p class="card-text text-white"><small class="text-muted text-white">@vacancy.PublishedAt</small></p>
-            </div>
-        </div>
-    }
+<div class="jumbotron">
+    <h1 class="display-4">Я hhFinder. Привет!</h1>
+    <p class="lead">Я могу помочь найти тебе работу. Только нужно ввести, кем ты хочешь стать.</p>
+    <hr class="my-4">
+    <p>Это легко. И бесплатно!</p>
+    <a class="btn btn-primary btn-lg text-center" href="@Url.Action("Search", "Home")" role="button">Learn more</a>
 </div>

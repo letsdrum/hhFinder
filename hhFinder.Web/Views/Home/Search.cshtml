@@ -1,0 +1,54 @@
+﻿@using hhFinder.Entities;
+@model List<FullVacancy>
+
+@{
+    ViewBag.Title = "Результаты поиска";
+}
+
+
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Тестировщик</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">C#</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">JavaScript</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="container-fluid row m-0 p-4 justify-content-between">
+            <div>
+                <div class="form-check">
+                    @Html.RadioButton("exampleRadios", "option1", true, new { @class = "form-check-input", @id = "exampleRadios1" })
+                    @Html.Label("Без опыта работы", new { @class = "form-check-label", @for = "exampleRadios1" })
+                </div>
+                <div class="form-check">
+                    @Html.RadioButton("exampleRadios", "option2", true, new { @class = "form-check-input", @id = "exampleRadios2" })
+                    @Html.Label("Опыт работы от 1 до 3 года", new { @class = "form-check-label", @for = "exampleRadios2" })
+                </div>
+            </div>
+            <div class="form-check">
+                @Html.CheckBox("checkbox", false, new { @class = "form-check-input", @id = "isBeginOfCarrier" })
+                @Html.Label("Начало карьеры", new { @class = "form-check-label", @for = "isBeginOfCarrier" })
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-wrap p-3 justify-content-between">
+            @foreach (var vacancy in Model)
+            {
+                <div class="card text-white bg-primary mb-3" style="max-width: 500px;">
+                    <div class="card-header">@vacancy.Id</div>
+                    <div class="card-body">
+                        <h5 class="card-title">@vacancy.Name</h5>
+                        <a href="@vacancy.AlternateURL" class="stretched-link"></a>
+
+                        @Html.Raw(vacancy.Description)
+
+                        <p class="card-text text-white"><small class="text-white">@vacancy.PublishedAt</small></p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+</div>

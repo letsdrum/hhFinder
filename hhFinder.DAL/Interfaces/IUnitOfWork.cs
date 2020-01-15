@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace hhFinder.DAL.Interfaces
 {
-    public interface IRepository<T> where T : class
+    interface IUnitOfWork : IDisposable
     {
-        List<T> GetVacancies(string Params);
-        T GetVacancy(string id);
+        IRepository<FullVacancy> FullVacancy { get; }
+        void Save();
     }
 }

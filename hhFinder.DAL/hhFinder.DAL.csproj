@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Models\FullVacancy.cs" />
     <Compile Include="Models\VacancyJson.cs" />
     <Compile Include="Models\VacancyModel.cs" />

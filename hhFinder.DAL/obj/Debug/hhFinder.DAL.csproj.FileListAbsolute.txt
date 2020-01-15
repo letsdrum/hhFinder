@@ -1,0 +1,7 @@
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\bin\Debug\hhFinder.DAL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\bin\Debug\hhFinder.DAL.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\bin\Debug\Newtonsoft.Json.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\bin\Debug\Newtonsoft.Json.xml
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\obj\Debug\hhFinder.DAL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\obj\Debug\hhFinder.DAL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.DAL\obj\Debug\hhFinder.DAL.pdb

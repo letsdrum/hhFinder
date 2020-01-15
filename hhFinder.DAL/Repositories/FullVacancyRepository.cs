@@ -10,31 +10,28 @@ using System.Threading.Tasks;
 
 namespace hhFinder.DAL.Repositories
 {
-    class FullVacancyRepository : IRepository<FullVacancy>
+    public class FullVacancyRepository : IRepository<FullVacancy>
     {
         private string EndPoint;
         private string UserAgent;
-        private string Params;
-        private ICollection<VacancyJson> VacanciesJson;
 
-        public FullVacancyRepository(string EndPoint, string Params, string UserAgent, ICollection<VacancyJson> VacanciesJson)
+        public FullVacancyRepository(string EndPoint, string UserAgent)
         {
             this.EndPoint = EndPoint;
             this.UserAgent = UserAgent;
-            this.Params = Params;
-            this.VacanciesJson = VacanciesJson;
         }
 
-        public List<FullVacancy> GetVacancies()
+        public List<FullVacancy> GetVacancies(string Params)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(EndPoint + "?" + Params);
-            request.UserAgent = UserAgent;
+            HttpWebRequest requestVacancies = (HttpWebRequest)WebRequest.Create(EndPoint + "?" + Params);
+            requestVacancies.UserAgent = UserAgent;
 
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            HttpWebResponse response = (HttpWebResponse)requestVacancies.GetResponse();
             Stream stream = response.GetResponseStream();
             StreamReader reader = new StreamReader(stream);
 
             var json = reader.ReadToEnd();
+
             VacancyJson vacancyJson = JsonConvert.DeserializeObject<VacancyJson>(json);
             var ListOfVacancies = new List<FullVacancy>();
 
@@ -55,7 +52,8 @@ namespace hhFinder.DAL.Repositories
             Stream streamVacancy = responseVacancy.GetResponseStream();
             StreamReader readerVacancy = new StreamReader(streamVacancy);
 
-            return JsonConvert.DeserializeObject<FullVacancy>(readerVacancy.ReadToEnd());
+            var json = readerVacancy.ReadToEnd();
+            return JsonConvert.DeserializeObject<FullVacancy>(json);
         }
     }
 }

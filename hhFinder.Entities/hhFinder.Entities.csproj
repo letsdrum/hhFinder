@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="FullVacancy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vacancy.cs" />
+    <Compile Include="VacancyJson.cs" />
     <Compile Include="VacancyModel.cs" />
   </ItemGroup>
   <ItemGroup>

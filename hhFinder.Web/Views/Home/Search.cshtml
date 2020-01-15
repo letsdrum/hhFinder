@@ -31,21 +31,35 @@
                 @Html.Label("Начало карьеры", new { @class = "form-check-label", @for = "isBeginOfCarrier" })
             </div>
         </div>
-        <div class="container-fluid d-flex flex-wrap p-3 justify-content-between">
-            @foreach (var vacancy in Model)
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="d-flex flex-column p-3" style="max-width: 60%">
+                @foreach (var vacancy in Model)
             {
-                <div class="card text-white bg-primary mb-3" style="max-width: 500px;">
-                    <div class="card-header">@vacancy.Id</div>
-                    <div class="card-body">
-                        <h5 class="card-title">@vacancy.Name</h5>
-                        <a href="@vacancy.AlternateURL" class="stretched-link"></a>
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header d-flex justify-content-between collapsed" data-toggle="collapse" href="#collapse-collapsed-@vacancy.Id">
+                            <a class="d-block text-white">
+                                @vacancy.Employer.Name
+                            </a>
+                            <a class="d-block text-white">
+                                @vacancy.Name
+                            </a>
+                            <a class="d-block text-white">
+                                *SALARY*
+                            </a>
+                        </div>
+                        <div class="card-body collapse" id="collapse-collapsed-@vacancy.Id" aria-labelledby="heading-collapsed-@vacancy.Id">
+                            <h5 class="card-title">@vacancy.Name</h5>
+                            @*<a href="@vacancy.AlternateURL" class="stretched-link"></a>*@
 
-                        @Html.Raw(vacancy.Description)
+                            @Html.Raw(vacancy.Description)
 
-                        <p class="card-text text-white"><small class="text-white">@vacancy.PublishedAt</small></p>
+                            <p class="card-text text-white"><small class="text-white">@vacancy.PublishedAt</small></p>
+                            <p class="card-text text-white"><small class="text-white">@vacancy.Experience.Name</small></p>
+                            <p class="card-text text-white"><small class="text-white">@vacancy.Employer.Name</small></p>
+                        </div>
                     </div>
-                </div>
-            }
+                }
+            </div>
         </div>
 
     </div>

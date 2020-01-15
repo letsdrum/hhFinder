@@ -33,10 +33,10 @@ namespace hhFinder.Web.Controllers
             StreamReader reader = new StreamReader(stream);
 
             var json = await reader.ReadToEndAsync();
-            VacancyJson list = JsonConvert.DeserializeObject<VacancyJson>(json);
+            VacancyJson vacancyJson = JsonConvert.DeserializeObject<VacancyJson>(json);
             var ListOfVacancies = new List<FullVacancy>();
 
-            foreach (var item in list.vac)
+            foreach (var item in vacancyJson.VacancyList)
             {
                 HttpWebRequest requestVacancy = (HttpWebRequest)WebRequest.Create("https://api.hh.ru/vacancies/" + item.Id);
                 requestVacancy.UserAgent = "hhFinder/1.0 (letsdrumm@gmail.com)";

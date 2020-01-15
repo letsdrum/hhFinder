@@ -240,10 +240,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\hhFinder.Database\hhFinder.Database.csproj">
-      <Project>{2f89a9f5-644a-4b1a-88ff-04aca8360113}</Project>
-      <Name>hhFinder.Database</Name>
-    </ProjectReference>
     <ProjectReference Include="..\hhFinder.Entities\hhFinder.Entities.csproj">
       <Project>{7a50aaf5-4a97-4f25-a212-ebde2ac3c593}</Project>
       <Name>hhFinder.Entities</Name>

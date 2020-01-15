@@ -8,48 +8,33 @@ using System.Web.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
-using hhFinder.Entities;
 using System.Threading.Tasks;
+using hhFinder.BLL.Services;
+using hhFinder.DAL.Repositories;
+using AutoMapper;
+using hhFinder.BLL.Models;
+using hhFinder.Web.Models;
 
 namespace hhFinder.Web.Controllers
 {
     public class HomeController : Controller
     {
+        const string EndPoint = "https://api.hh.ru/vacancies";
+        const string UserAgent = "hhFinder/1.0 (letsdrumm@gmail.com)";        
+        VacancyService service = new VacancyService(new FullVacancyRepository(EndPoint, UserAgent));
+
         public ActionResult Index()
         {                       
             return View();
         }
-        const string ENDPOINT_REQUEST = "https://api.hh.ru/vacancies?text=тестировщик&area=24";
-        const string ENV_USERAGENT = "hhFinder/1.0 (letsdrumm@gmail.com)";
 
-
-        public async Task<ActionResult> Search()
+        public ActionResult Search()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.hh.ru/vacancies?text=тестировщик&area=24");
-            request.UserAgent = "hhFinder/1.0 (letsdrumm@gmail.com)";   
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream stream = response.GetResponseStream();
-            StreamReader reader = new StreamReader(stream);
-
-            var json = await reader.ReadToEndAsync();
-            VacancyJson vacancyJson = JsonConvert.DeserializeObject<VacancyJson>(json);
-            var ListOfVacancies = new List<FullVacancy>();
-
-            foreach (var item in vacancyJson.VacancyList)
-            {
-                HttpWebRequest requestVacancy = (HttpWebRequest)WebRequest.Create("https://api.hh.ru/vacancies/" + item.Id);
-                requestVacancy.UserAgent = "hhFinder/1.0 (letsdrumm@gmail.com)";
-                
-                HttpWebResponse responseVacancy = (HttpWebResponse)requestVacancy.GetResponse();
-                Stream streamVacancy = responseVacancy.GetResponseStream();
-                StreamReader readerVacancy = new StreamReader(streamVacancy);
-
-                var VacancyObj = JsonConvert.DeserializeObject<FullVacancy>(await readerVacancy.ReadToEndAsync());
-                ListOfVacancies.Add(VacancyObj);
-            }
-
-            return View(ListOfVacancies);
+            var Params = "text=тестировщик&area=24";
+            
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<FullVacancyDTO, FullVacancyView>()).CreateMapper();
+            var vacancies = mapper.Map<List<FullVacancyDTO>, List<FullVacancyView>>(service.GetVacancies(Params));
+            return View(vacancies);
         }        
     }
 }

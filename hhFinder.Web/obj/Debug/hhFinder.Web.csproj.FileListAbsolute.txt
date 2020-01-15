@@ -67,5 +67,9 @@ d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\Microsoft.Owi
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\obj\Debug\hhFinder.Web.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\obj\Debug\hhFinder.Web.dll
 d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\obj\Debug\hhFinder.Web.pdb
-d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.Entities.dll
-d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.Entities.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\AutoMapper.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.BLL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.DAL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.BLL.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\hhFinder.DAL.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.Web\bin\AutoMapper.xml

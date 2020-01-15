@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("hhFinder.Database")]
+[assembly: AssemblyTitle("hhFinder.BLL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("hhFinder.Database")]
+[assembly: AssemblyProduct("hhFinder.BLL")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2f89a9f5-644a-4b1a-88ff-04aca8360113")]
+[assembly: Guid("82360d2d-6bfd-4027-8459-452302cde049")]
 
 // Version information for an assembly consists of the following four values:
 //

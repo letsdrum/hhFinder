@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hhFinder.Entities
+namespace hhFinder.DAL
 {
     public class VacancyModel
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace hhFinder.Entities
+namespace hhFinder.DAL
 {
     public class FullVacancy : VacancyModel
     {

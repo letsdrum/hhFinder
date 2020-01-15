@@ -1,0 +1,11 @@
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\hhFinder.BLL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\hhFinder.BLL.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\AutoMapper.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\hhFinder.DAL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\Newtonsoft.Json.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\hhFinder.DAL.pdb
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\AutoMapper.xml
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\bin\Debug\Newtonsoft.Json.xml
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\obj\Debug\hhFinder.BLL.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\obj\Debug\hhFinder.BLL.dll
+d:\documents\visual studio 2015\Projects\hhFinder\hhFinder.BLL\obj\Debug\hhFinder.BLL.pdb
